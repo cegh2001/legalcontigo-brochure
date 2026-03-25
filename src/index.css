@@ -1,0 +1,52 @@
+:root {
+  --radius: 0.625rem;
+
+  --petroleo: #003839;
+  --gold: #d0ba93;
+  --gold-dark: #a68a3e;
+
+  --background: #f4f7f6;
+  --foreground: #2d3737;
+
+  --card: #ffffff;
+  --card-foreground: #2d3737;
+
+  --primary: #003839;
+  --primary-foreground: #ffffff;
+
+  --secondary: #d0ba93;
+  --secondary-foreground: #003839;
+
+  --muted: #eef2f1;
+  --muted-foreground: #6b7777;
+
+  --accent: #d0ba93;
+  --accent-foreground: #003839;
+
+  --border: #e0e6e4;
+  --ring: #d0ba93;
+
+  --font-display: 'Inter', 'Segoe UI', sans-serif;
+  --font-ui: 'Inter', 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  line-height: 1.45;
+  color: var(--foreground);
+  background:
+    radial-gradient(ellipse at 10% 0%, rgba(208, 186, 147, 0.2), transparent 40%),
+    radial-gradient(ellipse at 90% 10%, rgba(0, 56, 57, 0.08), transparent 42%),
+    var(--background);
+}
