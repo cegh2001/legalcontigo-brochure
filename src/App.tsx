@@ -1,5 +1,7 @@
 import { forwardRef, useRef, useState } from 'react'
 import HTMLFlipBook from 'react-pageflip'
+import { QRCodeSVG } from 'qrcode.react'
+import { Share2, X, Link as LinkIcon } from 'lucide-react'
 import './App.css'
 
 interface BrochurePage {
@@ -119,7 +121,27 @@ const PageCard = forwardRef<HTMLDivElement, PageCardProps>(function PageCard(
 
 function App() {
   const [currentPage, setCurrentPage] = useState(0)
+  const [isShareModalOpen, setIsShareModalOpen] = useState(false)
   const flipBookRef = useRef<FlipBookRef | null>(null)
+
+  const shareUrl = 'https://legalcontigo-brochure.vercel.app/'
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'Brochure LegalContigo',
+          text: 'Descubre nuestros servicios legales y elige el mejor plan.',
+          url: shareUrl,
+        })
+      } catch (error) {
+        console.log('Error compartiendo:', error)
+      }
+    } else {
+      navigator.clipboard.writeText(shareUrl)
+      alert('¡Enlace copiado al portapapeles!')
+    }
+  }
 
   const handleFlip = (event: unknown) => {
     if (typeof event !== 'object' || event === null || !('data' in event)) {
@@ -207,6 +229,47 @@ function App() {
       </section>
 
       <p className="hint">Arrastra o haz swipe sobre cada hoja para navegar.</p>
+
+      {/* Share FAB */}
+      <button 
+        className="fab-share" 
+        onClick={() => setIsShareModalOpen(true)}
+        aria-label="Compartir Brochure"
+      >
+        <Share2 size={24} />
+      </button>
+
+      {/* Share Modal */}
+      {isShareModalOpen && (
+        <div className="modal-overlay" onClick={() => setIsShareModalOpen(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button 
+              className="modal-close" 
+              onClick={() => setIsShareModalOpen(false)}
+              aria-label="Cerrar modal"
+            >
+              <X size={24} />
+            </button>
+            <div className="qr-container">
+              <QRCodeSVG 
+                value={shareUrl} 
+                size={200}
+                bgColor={"#ffffff"}
+                fgColor={"#002D2D"}
+                level={"H"}
+                includeMargin={false}
+              />
+            </div>
+            <h3 className="qr-title">LegalContigo</h3>
+            <p className="qr-desc">Escanea el código QR para ver este brochure en tu móvil o compártelo.</p>
+            
+            <button className="btn-share-link" onClick={handleShare} style={{ marginTop: '1.5rem' }}>
+              <LinkIcon size={20} />
+              Compartir enlace
+            </button>
+          </div>
+        </div>
+      )}
     </main>
   )
 }
