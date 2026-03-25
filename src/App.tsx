@@ -143,11 +143,16 @@ function App() {
   return (
     <main className="brochure-shell">
       <section className="hero-copy">
+        <img
+          src="/imagotipo.png"
+          alt="Logo oficial de LegalContigo"
+          className="brand-logo"
+        />
         <p className="eyebrow">React + Vite + TypeScript</p>
-        <h1>Brochure interactivo con efecto real de pagina</h1>
+        <h1>Brochure interactivo LegalContigo</h1>
         <p>
-          Base lista para catalogo, revista legal o presentacion comercial de
-          LegalContigo.
+          Base lista para catalogo, revista legal o presentacion comercial con
+          identidad de marca oficial.
         </p>
       </section>
 
