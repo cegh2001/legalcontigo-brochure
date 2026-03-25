@@ -1,7 +1,7 @@
 :root {
   --radius: 1rem;
 
-  --petroleo: #002D2D;
+  --petroleo: #00393E;
   --gold: #d4af37;
   --gold-dark: #aa8529;
 
@@ -11,17 +11,17 @@
   --card: rgba(255, 255, 255, 0.75);
   --card-foreground: #1c2424;
 
-  --primary: #002D2D;
+  --primary: #00393E;
   --primary-foreground: #ffffff;
 
   --secondary: #d4af37;
-  --secondary-foreground: #002D2D;
+  --secondary-foreground: #00393E;
 
   --muted: #e6ebe9;
   --muted-foreground: #5e6b6b;
 
   --accent: #d4af37;
-  --accent-foreground: #002D2D;
+  --accent-foreground: #00393E;
 
   --border: rgba(0, 45, 45, 0.08);
   --ring: rgba(212, 175, 55, 0.4);
