@@ -3,7 +3,7 @@ import { Share2 } from 'lucide-react'
 import './App.css'
 
 function App() {
-  const imageUrl = 'https://legalcontigo-brochure.vercel.app/FOLLETO.PNG'
+  const imageUrl = 'https://legalcontigo-brochure.vercel.app/FOLLETO.png'
 
   const handleShare = async () => {
     if (navigator.share) {
