@@ -148,7 +148,6 @@ function App() {
           alt="Logo oficial de LegalContigo"
           className="brand-logo"
         />
-        <p className="eyebrow">React + Vite + TypeScript</p>
         <h1>Brochure interactivo LegalContigo</h1>
         <p>
           Base lista para catalogo, revista legal o presentacion comercial con
