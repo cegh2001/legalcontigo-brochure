@@ -43,7 +43,8 @@ function App() {
           <div className="qr-code-wrapper">
             <QRCodeSVG
               value={imageUrl}
-              size={220}
+              size={"100%" as any}
+              style={{ width: "100%", height: "100%" }}
               bgColor={"#ffffff"}
               fgColor={"#000000"}
               level={"H"}
