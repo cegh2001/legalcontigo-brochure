@@ -36,10 +36,10 @@ function App() {
         </header>
 
         <div className="qr-body">
-          <h1 className="qr-title">Descarga nuestro Folleto</h1>
+          <h1 className="qr-title">Descarga nuestro Brochure</h1>
           <p className="qr-desc">
             Escanea este código QR con la cámara de tu teléfono para descargar el
-            folleto informativo de LegalContigo.
+            brochure informativo de LegalContigo.
           </p>
 
           <div className="qr-code-wrapper">
@@ -60,6 +60,11 @@ function App() {
             Compartir Enlace
           </button>
           */}
+
+          <div className="qr-footer">
+            <a href="mailto:Contacto@legalcontigo.com" className="contact-link">Contacto@legalcontigo.com</a>
+            <p className="coming-soon">próximamente...</p>
+          </div>
         </div>
       </div>
     </main>

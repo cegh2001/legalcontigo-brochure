@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descargando Folleto | LegalContigo</title>
+    <title>Descargando Brochure | LegalContigo</title>
     <style>
         body {
             font-family: system-ui, -apple-system, sans-serif;
@@ -56,14 +56,34 @@
             width: 80px;
             margin-bottom: 1.5rem;
         }
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+        .contact-link {
+            color: #00393E;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .coming-soon {
+            margin-top: 0.5rem;
+            color: #5e6b6b;
+            font-style: italic;
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
     <div class="card">
         <img src="/imagotipo.png" alt="LegalContigo" class="logo">
         <h2>Descargando...</h2>
-        <p>Tu folleto se descargará en unos segundos. Si no ocurre automáticamente, utiliza el botón debajo.</p>
-        <a href="/FOLLETO.png" download="Folleto_LegalContigo.png" class="btn" id="downloadBtn">Descargar Folleto Manualmente</a>
+        <p>Tu brochure se descargará en unos segundos. Si no ocurre automáticamente, utiliza el botón debajo.</p>
+        <a href="/FOLLETO.png" download="Brochure_LegalContigo.png" class="btn" id="downloadBtn">Descargar Brochure Manualmente</a>
+        
+        <div class="footer">
+            <a href="mailto:Contacto@legalcontigo.com" class="contact-link">Contacto@legalcontigo.com</a>
+            <div class="coming-soon">próximamente...</div>
+        </div>
     </div>
 
     <script>

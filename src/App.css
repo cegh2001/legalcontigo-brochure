@@ -104,6 +104,33 @@
   transform: translateY(1px) scale(0.98);
 }
 
+.qr-footer {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.contact-link {
+  color: var(--petroleo);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.contact-link:hover {
+  border-color: var(--petroleo);
+}
+
+.coming-soon {
+  color: var(--muted-foreground);
+  margin: 0;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
 @media (max-width: 480px) {
   .qr-page {
     padding: 0.5rem;
