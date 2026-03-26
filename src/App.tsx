@@ -1,10 +1,11 @@
 import { QRCodeSVG } from 'qrcode.react'
-import { Share2 } from 'lucide-react'
+// import { Share2 } from 'lucide-react'
 import './App.css'
 
 function App() {
   const imageUrl = 'https://legalcontigo-brochure.vercel.app/FOLLETO.png'
 
+  /*
   const handleShare = async () => {
     if (navigator.share) {
       try {
@@ -21,6 +22,7 @@ function App() {
       alert('¡Enlace copiado al portapapeles!')
     }
   }
+  */
 
   return (
     <main className="qr-page">
@@ -52,10 +54,12 @@ function App() {
             />
           </div>
           
+          {/*
           <button className="btn-share" onClick={handleShare}>
             <Share2 size={20} />
             Compartir Enlace
           </button>
+          */}
         </div>
       </div>
     </main>
