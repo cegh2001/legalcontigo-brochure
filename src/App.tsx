@@ -3,7 +3,7 @@ import { QRCodeSVG } from 'qrcode.react'
 import './App.css'
 
 function App() {
-  const imageUrl = 'https://legalcontigo-brochure.vercel.app/FOLLETO.png'
+  const imageUrl = 'https://legalcontigo-brochure.vercel.app/download.html'
 
   /*
   const handleShare = async () => {
